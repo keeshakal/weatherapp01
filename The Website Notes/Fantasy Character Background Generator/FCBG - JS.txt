@@ -1,0 +1,42 @@
+function displayBackstory(response) {
+  new Typewriter("#backstory", {
+    strings: response.data.answer,
+    autoStart: true,
+    delay: 1,
+    cursor: "",
+  });
+}
+
+function generateBackstory(event) {
+  event.preventDefault();
+
+  let nameInsert = document.getElementById("insertName");
+  let nameResponse = nameInsert.value;
+
+  let raceInsert = document.getElementById("insertRace");
+  let raceResponse = raceInsert.value;
+
+  let classInsert = document.getElementById("insertClass");
+  let classResponse = classInsert.value;
+
+  let genderInsert = document.getElementById("insertGender");
+  let genderResponse = genderInsert.value;
+
+  let backgroundInsert = document.getElementById("backgrounds");
+  let backgroundResponse = backgroundInsert.value;
+
+  let ageInsert = document.getElementById("insertAge");
+  let ageResponse = ageInsert.value;
+
+  let prompt = `Please write me a short backstory (one paragraph, no more than 100 words) for a character named ${nameResponse}, who is a ${raceResponse} and who's class is a ${classResponse}. Their gender is ${genderResponse} and they are ${ageResponse} years old. Their background (as described in the Player's Handbook) is ${backgroundResponse}. Be specific and accurate with your answer and provide details such as family, home town, fears, desires, hopes, goals. Create a unique and interesting backstory every time. Try not to be too stereotypical.`;
+  let context =
+    "You are a nerdy AI assistant who knows lots about the fantasy genre and Dungeons and Dragons. ";
+  let key = "cfd74d4742a02oe0341423faf5c9a0bt";
+  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${key}`;
+
+  axios.get(apiUrl).then(displayBackstory);
+}
+
+let generatorForm = document.querySelector("#generator-form");
+generatorForm.addEventListener("submit", generateBackstory);
+s

@@ -1,0 +1,205 @@
+body {
+  background-color: #f3f2f1;
+  font-family: Roboto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  background-color: #ffffff;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  border: #a8151c;
+  border-width: 5px;
+}
+
+.text-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 500px;
+  margin: auto;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+}
+
+select option:hover {
+  background-color: #a8151c;
+}
+
+h1 {
+  color: #fefae0;
+  font-family: Roboto Condensed;
+  color: #0d0d0d;
+  font-size: 40px;
+  text-align: center;
+  padding: 10px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
+}
+
+h2 {
+  color: #0d0d0d;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  margin: 20px 0px 20px 0px;
+  padding: 0px;
+}
+
+footer {
+  color: #a8151c;
+  font-weight: 200;
+  font-family: Roboto;
+  text-align: center;
+  padding: 15px 0px 0px 0px;
+  font-size: 15px;
+}
+
+p {
+  font-size: 16px;
+  text-align: center;
+  font-family: Roboto;
+  margin: 0 auto;
+  padding: 20px 30px 20px 30px;
+}
+
+.submit-image {
+  width: 125px;
+  height: 125px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  background-position: center;
+}
+
+.submit-image:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.backstory {
+  margin-top: 20px 40px 10px 40px;
+  text-align: center;
+}
+
+.textBox {
+  padding: 10px;
+  background-color: #26282a;
+  color: #fefae0;
+  border-radius: 7px;
+  box-shadow: none;
+  border: 2px;
+  outline: none;
+  width: 130px;
+  flex: 1 1 50%; /* Each item takes up approximately 30% of the width */
+  min-width: 50px; /* Minimum width to keep items from getting too small */
+}
+
+.textBox::placeholder {
+  color: #fefae039;
+  font-family: Roboto;
+  font-size: 15px;
+}
+
+select option[value="Select a background"] {
+  color: #fefae039;
+  font-family: Roboto;
+  font-size: 15px;
+}
+
+.textBox:hover {
+  border-color: #a8151c;
+  border-style: double;
+}
+
+.textBox:focus {
+  background-color: #a8151c;
+  color: #f3f2f1;
+}
+
+.submitButton {
+  padding: 3px 14px 7px 14px;
+  margin: 10px 0px 30px 0px;
+  font-size: 20px;
+  font-family: Roboto;
+  border-radius: 2px;
+  background-color: #a8151c;
+  color: #fcfcfc;
+  text-decoration: none;
+  text-shadow: none;
+  border: 2px solid #eb1313;
+  border-radius: 11px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  transition: 100ms linear all;
+  background: #eb1313;
+}
+
+.submitButton:active,
+.submitButton:hover,
+.submitButton:focus {
+  outline: 0;
+}
+
+.submitButton:active:hover,
+.submitButton:focus:hover,
+.submitButton:focus {
+  background-color: #d33a2c;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+  color: #ffffff;
+}
+
+a {
+  color: #eb1313;
+}
+
+a:visited {
+  color: #a8151c;
+}
+
+a:hover {
+  color: #26282a;
+}

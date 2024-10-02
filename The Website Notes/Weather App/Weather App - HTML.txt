@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Kirsty's Weather App</title>
+  </head>
+  <body>
+    <div class="app">
+        <div class="app-top">
+            <header>
+                <form class="search-form" id="search-form">
+                <input 
+                type="search" 
+                placeholder="Enter a city..." 
+                class="search-form-input" 
+                id="search-form-input"
+                required/>
+                <input type="submit" value="Search" class="search-form-button" />
+                </form>
+            </header>
+                <main>
+                    <div>
+                        <div class = "time-day-container">
+                            <h1
+                                id="time" 
+                                class="time">
+                            </h1>
+                            </div>
+                            <h1
+                                id="day" 
+                                class="day">
+                            </h1>
+                        <h2
+                             id="city">
+                        </h2>
+                    <div class = "weather-container">
+                        <div class = "temperature-total">
+                        <span class="icon" id="icon">🌤️</span>
+                         <span class="current-temp" id="current-temp"></span><span class="unit">°C</span>
+                        </span>
+                    </div>
+                    <div class="details">
+                        <h3 id="description">Cloudy</h3>
+                        <p> Humidity:
+                       <strong><span 
+                        id="humidity"
+                        class="special">
+                    </span></strong>
+<br />Wind:
+                        <strong><span 
+                            id="wind-speed"
+                            class="special">
+                        </span></strong>
+                        </p>
+                    </div>
+                    </div>
+        </div>
+        </div>
+                <div class="weather-forecast" id="forecast"></div>
+                </main>
+            <footer>
+        Coded by
+        <a href="https://github.com/khall1610" target="_blank">Kirsty Hall,</a>
+        open-sourced on
+        <a href="https://github.com/khall1610/WeatherApp_Kirsty" target="_blank"
+          >GitHub</a
+        >
+        and hosted on
+        <a href="https://kirsty-weather-app.netlify.app/" target="_blank"
+          >Netflify.</a
+        >
+      </footer>
+      </div>
+      <script src="src/index.js"></script>
+  </body>
+</html>

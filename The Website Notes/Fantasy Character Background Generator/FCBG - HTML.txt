@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/script.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+    </style>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <title>Fantasy Backstory Generator</title>
+  </head>
+  <body>
+    <main>
+      <h1>
+        Fantasy Character <br />
+        Background Generator
+      </h1>
+      <h2>
+        Insert your character's details below then click on the D20 to generate
+        your character's backstory.
+      </h2>
+      <form class="container" id="generator-form">
+        <input
+          type="image"
+          src="d20-2699387_1280.webp"
+          alt="Submit"
+          class="submit-image"
+        />
+        <div class="text-grid">
+          <input
+            class="textBox"
+            type="text"
+            placeholder="Character's name"
+            autofocus
+            required
+            autocomplete="off"
+            id="insertName"
+          />
+          <input
+            class="textBox"
+            type="text"
+            placeholder="Character's race"
+            autofocus
+            required
+            autocomplete="off"
+            id="insertRace"
+          />
+          <input
+            class="textBox"
+            type="text"
+            placeholder="Character's class"
+            autofocus
+            required
+            autocomplete="off"
+            id="insertClass"
+          />
+          <input
+            class="textBox"
+            type="number"
+            placeholder="Character's age"
+            autofocus
+            autocomplete="off"
+            id="insertAge"
+          />
+          <input
+            class="textBox"
+            type="text"
+            placeholder="Character's gender (and pronouns)"
+            autofocus
+            autocomplete="off"
+            id="insertGender"
+          />
+
+          <select name="backgrounds" id="backgrounds" class="textBox">
+            <option value="Select a background" selected disabled>
+              Select a background
+            </option>
+            <option value="Acolyte">Acolyte</option>
+            <option value="Anthropologist">Anthropologist</option>
+            <option value="Archaeologist">Archaeologist</option>
+            <option value="Astral Drifter">Astral Drifter</option>
+            <option value="Athlete">Athlete</option>
+            <option value="Azorius Functionary">Azorius Functionary</option>
+            <option value="Boros Legionnaire">Boros Legionnaire</option>
+            <option value="Celebrity Adventurer's Scion">
+              Celebrity Adventurer's Scion
+            </option>
+            <option value="Charlatan">Charlatan</option>
+            <option value="City Watch / Investigator">
+              City Watch / Investigator
+            </option>
+            <option value="Clan Crafter">Clan Crafter</option>
+            <option value="Cloistered Scholar">Cloistered Scholar</option>
+            <option value="Courtier">Courtier</option>
+            <option value="Criminal/Spy">Criminal/Spy</option>
+            <option value="Dimir Operative">Dimir Operative</option>
+            <option value="Entertainer">Entertainer</option>
+            <option value="Faceless">Faceless</option>
+            <option value="Faction Agent">Faction Agent</option>
+            <option value="Failed Merchant">Failed Merchant</option>
+            <option value="Far Traveler">Far Traveler</option>
+            <option value="Feylost">Feylost</option>
+            <option value="Fisher">Fisher</option>
+            <option value="Folk Hero">Folk Hero</option>
+            <option value="Gambler">Gambler</option>
+            <option value="Gladiator">Gladiator</option>
+            <option value="Golgari Agent">Golgari Agent</option>
+            <option value="Grinner">Grinner</option>
+            <option value="Gruul Anarch">Gruul Anarch</option>
+            <option value="Guild Artisan / Guild Merchant">
+              Guild Artisan / Guild Merchant
+            </option>
+            <option value="Haunted One">Haunted One</option>
+            <option value="Hermit">Hermit</option>
+            <option value="House Agent">House Agent</option>
+            <option value="Inheritor">Inheritor</option>
+            <option value="Investigator">Investigator</option>
+            <option value="Izzet Engineer">Izzet Engineer</option>
+            <option value="Knight">Knight</option>
+            <option value="Knight of Solamnia">Knight of Solamnia</option>
+            <option value="Knight of the Order">Knight of the Order</option>
+            <option value="Lorehold Student">Lorehold Student</option>
+            <option value="Mage of High Sorcery">Mage of High Sorcery</option>
+            <option value="Marine">Marine</option>
+            <option value="Mercenary Veteran">Mercenary Veteran</option>
+            <option value="Noble">Noble</option>
+            <option value="Orzhov Representative">Orzhov Representative</option>
+            <option value="Outlander">Outlander</option>
+            <option value="Pirate">Pirate</option>
+            <option value="Plaintiff">Plaintiff</option>
+            <option value="Prismari Student">Prismari Student</option>
+            <option value="Quandrix Student">Quandrix Student</option>
+            <option value="Rakdos Cultist">Rakdos Cultist</option>
+            <option value="Rival Intern">Rival Intern</option>
+            <option value="Sage">Sage</option>
+            <option value="Sailor">Sailor</option>
+            <option value="Selesnya Initiate">Selesnya Initiate</option>
+            <option value="Shipwright">Shipwright</option>
+            <option value="Silverquill Student">Silverquill Student</option>
+            <option value="Simic Scientist">Simic Scientist</option>
+            <option value="Smuggler">Smuggler</option>
+            <option value="Soldier">Soldier</option>
+            <option value="Urban Bounty Hunter">Urban Bounty Hunter</option>
+            <option value="Urchin">Urchin</option>
+            <option value="Uthgardt Tribe Member">Uthgardt Tribe Member</option>
+            <option value="Volstrucker Agent">Volstrucker Agent</option>
+            <option value="Waterdhavian Noble">Waterdhavian Noble</option>
+            <option value="Wildspacer">Wildspacer</option>
+            <option value="Witchlight Hand">Witchlight Hand</option>
+            <option value="Witherbloom Student">Witherbloom Student</option>
+          </select>
+        </div>
+        <section class="backstory">
+          <p id="backstory"></p>
+        </section>
+      </form>
+    </main>
+    <footer>
+      This was coded by Kirsty Hall and is open sourced on
+      <a href="https://github.com/khall1610" target="_blank">GitHub.</a>
+    </footer>
+    <script src="src/index.js"></script>
+  </body>
+</html>
