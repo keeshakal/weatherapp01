@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
-{
- box sizing: border-box;
+* {
+    box-sizing: border-box;  
 }
 
 body {
-    margin:0;
+    margin: 0;
     font-family: "Poppins", sans-serif;
     background-color: #25282A;
     display: flex;
@@ -28,16 +28,16 @@ input {
 }
 
 input:focus {
-    outline:none;
+    outline: none;
 }
 
 .weather {
-    text-align:center;
+    text-align: center;
     font-size: 2rem;
 }
 
 .weather h2 {
-    margin-bottom:0;
+    margin-bottom: 0;
     display: flex;
     align-items: center;
 }
