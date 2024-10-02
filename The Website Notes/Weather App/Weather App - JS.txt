@@ -72,8 +72,8 @@ function handleSearchSubmit(event) {
 }
 
 function getForecast(city) {
-  let apiKey = `cfd74d4742a02oe0341423faf5c9a0bt`;
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  let apiKey = `fe1483f743b581b5520a1b725af03a49`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
   axios(apiUrl).then(displayForecast);
 }
 
@@ -113,4 +113,4 @@ function titleCase(str) {
     .replace(/(^|\s)\S/g, (firstLetter) => firstLetter.toUpperCase());
 }
 
-searchCity("Bath");
+searchCity("Johannesburg");

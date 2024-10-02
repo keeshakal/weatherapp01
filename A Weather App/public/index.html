@@ -7,10 +7,67 @@
     <title>Weather App</title>
 </head>
 <body>
-    <form id="form">
-        <input type="text" id="search" placeholder="Search By Location" autocomplete="off">
+<header>
+    <form class="search-form" id="search-form">
+        <input type="search"
+        placeholder="Enter a city..."
+        class="search-form-input"
+        id="search-form-input"required/>
+        <input type ="submit" value="Search" class="search-form-button"/>
     </form>
-    <main id="main"></main>
+</header>
+    <main> 
+        <div>
+            <div class ="time-day-container"></div>
+            <h1 id="time" class="time"></h1>
+        </div>
+            <h1 id="day"
+            class="day">
+            </h1>
+            <h2 id="city"></h2>
+            <div class ="weather-conatiner">
+                <div class="temperature-total">
+                    <span class="icon" id="icon">🌤️</span>
+                    <span class="current-temp" id="current-temp"></span>
+                    <span class="unit">°C</span>
+                </div>
+                <div class="details">
+                    <h3 id="description">Cloudy</h3>
+                    <p>Humidity:
+                    <strong><span id="humidity" class="special"></span>
+                    </strong>
+                    </p>
+                </div>
+            </div>
+    <div class="weather-forecast" id="forecast"></div>        
+    </main>
+    <footer>
+        This page is coded by 
+        <a
+          href="https://www.linkedin.com/in/keesha-kallasur-a123221b6"
+          target="_blank"
+          rel="noreferrer"
+        >
+      Keesha Kallasur
+        </a>
+      open sourced on
+        <a
+          href="https://github.com/keeshakal"
+          target="_blank"
+          rel="noreferrer"
+        >
+        
+      GitHub
+        </a>
+      hosted on
+        <a
+          href="https://anotherweatherapplication.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+      Netlify.
+        </a>
+    </footer>
     <script src="/src/script.js"></script>
 </body>
 </html>
