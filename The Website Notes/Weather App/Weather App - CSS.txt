@@ -4,10 +4,10 @@ body {
 }
 
 .special {
-  color: #085551;
+  color: #085551; #253528
 }
 .time-date-box {
-  background-color: #406b69;
+  background-color: #406b69; #49654e
 }
 
 .details {
@@ -27,10 +27,10 @@ body {
 }
 
 .app-top {
-  background-color: #add1cf;
+  background-color: #add1cf; #8ba888
   padding: 20px 0px 0px 0px;
   border-radius: 25px 25px 0px 0px;
-  text-shadow: 2px 2px 10px#7aaaa9;
+  text-shadow: 2px 2px 10px #7aaaa9; #c0cfb2
   color: #fcfcfc;
   font-family: Helvetica, sans-serif;
 }
@@ -42,7 +42,7 @@ body {
 }
 
 .app {
-  background-color: #fcfcfc;
+  background-color: #fcfcfc;#e4e6d9
   max-width: 600px;
   margin: 45px auto;
   padding: 0px;
@@ -51,7 +51,7 @@ body {
 }
 
 .weather-container {
-  background-color: #7aaaa9;
+  background-color: #7aaaa9; #c0cfb2
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,7 +91,7 @@ body {
 }
 
 .search-form-button {
-  background-color: #7aaaa9;
+  background-color: #7aaaa9; #c0cfb2
   border-color: #fcfcfc;
   color: #fcfcfc;
   font-family: Helvetica;
