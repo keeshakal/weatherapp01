@@ -59,14 +59,11 @@ function refreshWeather(response) {
     return days[date.getDay()];
   }
   
-  const apiKey = "fe1483f743b581b5520a1b725af03a49";
-  
-  const main = document.getElementById('main');
-  const form = document.getElementById('form');
-  const search = document.getElementById('search');
-    
-  const url = (city)=> `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=fe1483f743b581b5520a1b725af03a49`; 
-  
+  function searchCity(city) {
+    let apiKey = "a77d4b0f7e2617b44oe3t97209d831aa";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(refreshWeather);
+  }
   
   function handleSearchSubmit(event) {
     event.preventDefault();
