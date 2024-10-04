@@ -7,40 +7,11 @@
     <title>Weather App</title>
 </head>
 <body>
-<header>
-    <form class="search-form" id="search-form">
-        <input type="search"
-        placeholder="Enter a city..."
-        class="search-form-input"
-        id="search-form-input"required/>
-        <input type ="submit" value="Search" class="search-form-button"/>
-    </form>
-</header>
-    <main> 
-        <div>
-            <div class ="time-day-container"></div>
-            <h1 id="time" class="time"></h1>
-        </div>
-            <h1 id="day"
-            class="day">
-            </h1>
-            <h2 id="city"></h2>
-            <div class ="weather-conatiner">
-                <div class="temperature-total">
-                    <span class="icon" id="icon">🌤️</span>
-                    <span class="current-temp" id="current-temp"></span>
-                    <span class="unit">°C</span>
-                </div>
-                <div class="details">
-                    <h3 id="description">Cloudy</h3>
-                    <p>Humidity:
-                    <strong><span id="humidity" class="special"></span>
-                    </strong>
-                    </p>
-                </div>
-            </div>
-    <div class="weather-forecast" id="forecast"></div>        
-    </main>
+  <form id="form">
+    <input type="text" id="search" placeholder="Search By Location" autocomplete="off">
+</form>
+<main id="main">
+</main>
     <footer>
         This page is coded by 
         <a
@@ -56,7 +27,6 @@
           target="_blank"
           rel="noreferrer"
         >
-        
       GitHub
         </a>
       hosted on
